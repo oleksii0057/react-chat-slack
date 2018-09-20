@@ -59,6 +59,7 @@ export default class Chat extends Component {
         this.storeData(messages, thread_ts);
         this.scrollToBottom();
       } catch (e) {
+        console.log("Exception occured: " + JSON.strignify(e));
         this.setState({
           thread_ts: null,
           messages: [],
