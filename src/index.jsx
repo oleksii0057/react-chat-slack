@@ -19,7 +19,7 @@ export default class Chat extends Component {
     };
 
     this.bot = new Bot({ username, token });
-    this.refresh = setInterval(this.refreshReplies, 1000);
+    this.refresh = setInterval(this.refreshReplies, 3000);
   }
 
   getStoredData = () => JSON.parse(localStorage.getItem(`react-chat-slack-data-${this.username}`)) || {
