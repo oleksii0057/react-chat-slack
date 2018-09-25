@@ -143,7 +143,7 @@ export default class Chat extends Component {
             <div
               style = {{position: "fixed",
                 left: "92%",
-                bottom: "35px",
+                bottom: "20px",
                 width: "7%",
                 background: "white",
                 borderRadius: "50px",
