@@ -59,7 +59,7 @@ export default class Chat extends Component {
         this.storeData(messages, thread_ts);
         this.scrollToBottom();
       } catch (e) {
-        console.log("Exception occured: " + JSON.strignify(e));
+        console.log("Exception occured: " + e);
         this.setState({
           thread_ts: null,
           messages: [],
@@ -139,9 +139,10 @@ export default class Chat extends Component {
             </div>
           ) : (
             <div
-              id="react-chat-slack-greeting"
+              id="react-chat-slack-chatbox"
               onClick={() => this.setState({ expanded: true })}
-            >{ this.state.title }
+            >
+            <img src="./chat.png" style = {{width: "45px"}}/>
             </div>
           )
         }
