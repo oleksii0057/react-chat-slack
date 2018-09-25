@@ -141,10 +141,16 @@ export default class Chat extends Component {
             </div>
           ) : (
             <div
-              id="react-chat-slack-chatbox"
+              style = {{position: "fixed",
+                left: "92%",
+                bottom: "35px",
+                width: "7%",
+                background: "white",
+                borderRadius: "50px",
+                zIndex: 1000}}
               onClick={() => this.setState({ expanded: true })}
             >
-            <img src="https://s3.amazonaws.com/customerui-profile-icons/chat.png" style = {{width: "65px"}}/>
+            <img src="https://s3.amazonaws.com/customerui-profile-icons/chat.png" style = {{width: "100%"}}/>
             </div>
           )
         
