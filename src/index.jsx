@@ -104,9 +104,10 @@ export default class Chat extends Component {
 
   render() {
     return (
-      <div id="react-chat-slack">
-        {
+      
+        
           this.state.expanded ? (
+            <div id="react-chat-slack">
             <div id="react-chat-slack-box">
               <div
                 id="react-chat-slack-greeting"
@@ -137,16 +138,17 @@ export default class Chat extends Component {
                 <button type="submit">Send</button>
               </form>
             </div>
+            </div>
           ) : (
             <div
               id="react-chat-slack-chatbox"
               onClick={() => this.setState({ expanded: true })}
             >
-            <img src="https://s3.amazonaws.com/customerui-profile-icons/chat.png" style = {{width: "45px"}}/>
+            <img src="https://s3.amazonaws.com/customerui-profile-icons/chat.png" style = {{width: "65px"}}/>
             </div>
           )
-        }
-      </div>
+        
+      
     );
   }
 }
