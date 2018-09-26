@@ -124,7 +124,9 @@ export default class Chat extends Component {
                     <div
                       key={index}
                       className={`react-chat-slack-message react-chat-slack-${message.username === this.state.username && 'my'}`}
-                    >{ message.text }
+                    >
+                    <p>VL Omni</p>
+                    { message.text }
                     </div>
                   ))
                 }

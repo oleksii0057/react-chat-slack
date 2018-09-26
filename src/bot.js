@@ -27,5 +27,7 @@ export default class Bot {
     }
   }
 
-  getReplies = (channel, thread_ts) => this.bot.channels.replies({ channel, thread_ts })
+  getReplies = (channel, thread_ts) => this.bot.channels.replies({ channel, thread_ts });
+
+  getUser = (user) => this.bot.users.info({user})
 }
