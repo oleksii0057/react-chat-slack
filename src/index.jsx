@@ -55,6 +55,12 @@ export default class Chat extends Component {
         result = await this.bot.getReplies(channel_id, thread_ts);
         const { messages } = result;
 
+        for (var key in messages) {
+          if (messages[key].username == undefined ||  messages[key].username == '') {
+            messages[key].username = "VL OMNI";
+          }
+        }
+
         this.setState({ messages });
         this.storeData(messages, thread_ts);
         this.scrollToBottom();
@@ -125,7 +131,7 @@ export default class Chat extends Component {
                       key={index}
                       className={`react-chat-slack-message react-chat-slack-${message.username === this.state.username && 'my'}`}
                     >
-                    <p>VL Omni</p>
+                    
                     { message.text }
                     </div>
                   ))
@@ -144,11 +150,12 @@ export default class Chat extends Component {
           ) : (
             <div
               style = {{position: "fixed",
-                left: "92%",
-                bottom: "20px",
-                width: "7%",
+                left: "93%",
+                bottom: "12px",
+                width: "6%",
                 background: "white",
                 borderRadius: "50px",
+                border: "1px solid lightgray",
                 zIndex: 1000}}
               onClick={() => this.setState({ expanded: true })}
             >
